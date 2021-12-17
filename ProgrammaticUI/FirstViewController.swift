@@ -29,9 +29,22 @@ class FirstViewController: UIViewController {
          setUpHintLabel()
          setUpTitleLabel()
         
-        
+        fbButton.addTarget(self, action: #selector(self.fbButtonPress), for: .touchUpInside)
+        gmailButton.addTarget(self, action: #selector(self.gmailButtonPress), for: .touchUpInside)
+         emailButton.addTarget(self, action: #selector(self.emailButtonPress), for: .touchUpInside)
     }
     
+    @objc func fbButtonPress(){
+     print("fb button pressed")
+     }
+
+     @objc func gmailButtonPress(){
+     print("gmail button pressed")
+     }
+
+     @objc func emailButtonPress(){
+     print("email button pressed")
+     }
 
     func setUpContent(){
      //code to be added

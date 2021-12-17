@@ -18,7 +18,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.hidesBarsOnTap = true
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.green
         setUpContent()
@@ -36,6 +36,11 @@ class FirstViewController: UIViewController {
     
     @objc func fbButtonPress(){
      print("fb button pressed")
+        let newViewController = SecondViewController()
+        newViewController.modalPresentationStyle = .fullScreen
+        newViewController.title = "Second Screen"
+        self.navigationController?.pushViewController(newViewController, animated: true)
+        
      }
 
      @objc func gmailButtonPress(){

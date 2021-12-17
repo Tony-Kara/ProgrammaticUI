@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
       //  guard let _ = (scene as? UIWindowScene) else { return }
           guard let baseWindowScene = (scene as? UIWindowScene) else { return }
           let startingViewController = FirstViewController()
+          startingViewController.title = "Login Screen"
           let navigationController = UINavigationController()
           navigationController.pushViewController(startingViewController, animated: true)
           let window = UIWindow(windowScene: baseWindowScene)
